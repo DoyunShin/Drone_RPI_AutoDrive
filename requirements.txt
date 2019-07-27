@@ -1,0 +1,6 @@
+opencv-contrib-python 
+dlib 
+face_recognition 
+Flask
+Flask-Compress
+google-cloud-vision
