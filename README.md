@@ -38,11 +38,15 @@ cmd창에 아래의 명령어를 입력해주세요.
 
 > # URL 스트리밍에서 가져올시
 > #self.video = cv2.VideoCapture('http://0.0.0.0/stream')
+
 사용할 카메라 앞에 있는 #을 삭제해주세요.
+
 ### 실행
 먼저 run_flask.py를 실행해주세요
 > python run_flask.py
-그 다음, 
+
+그 다음, face_recog.py를 실행해주세요
+> python face_recog.py
 
 
 -----
