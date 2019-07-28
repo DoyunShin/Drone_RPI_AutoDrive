@@ -49,8 +49,6 @@ cmd창에 아래의 명령어를 입력해주세요.
 > python face_recog.py
 
 
------
-
 ## Linux
 ### git 설치
 아래의 명령어를 입력하세요
@@ -69,7 +67,7 @@ clone이 완료되었다면 install.sh를 실행해주세요.
 터미널에서 설치가 완료한 다음, camera.py에 들어갑니다.
 > ## 내 PC 카메라 사용
 > #self.video = cv2.VideoCapture(0)
-        
+
 > ## 파일에서 영상을 사용 시
 > #self.video = cv2.VideoCapture('abc.mp4')
 
@@ -78,7 +76,17 @@ clone이 완료되었다면 install.sh를 실행해주세요.
 
 사용할 카메라 앞에 있는 #을 삭제해주세요.
 
+### 실행
+먼저 run_flask.py를 실행해주세요
+> python run_flask.py
 
-exit data1
-person data2
-stats data3
+그 다음, face_recog.py를 실행해주세요
+> python face_recog.py
+
+## 공통
+현재 데이터는 이렇게 지정하였습니다.
+> exit data1
+
+> person data2
+
+> stats data3
