@@ -204,8 +204,8 @@ def detect_person_detail(pface_recog, p_loopcount):
             #res = requests.post(URL, data=data)
             #res.request
 
-            check = 'true'
-            with open('check.ck', 'wb') as file:
+            check = '1'
+            with open('ck/data2.ck', 'wb') as file:
                 pickle.dump(check, file)
                 
             #구글 호출
@@ -237,8 +237,10 @@ if __name__ == '__main__':
     #data = {'data1': 'False'}
     #res = requests.post(URL, data=data)
     #res.request
-    check = 'false'
-    with open('check.ck', 'wb') as file:
+    check = '0'
+    with open('ck/data2.ck', 'wb') as file:
+        pickle.dump(check, file)
+    with open('ck/data3.ck', 'wb') as file:
         pickle.dump(check, file)
 
     face_recog = FaceRecog()

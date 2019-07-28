@@ -85,11 +85,11 @@ if __name__ == '__main__':
     gAPI_call_main('images/findImage_org.jpg', 'images/findImage_google.jpg', 4)
 
     # 사진 보여주기 - 불필요시 주석처리.
-    check = 'true'
-    with open('status.ck', 'wb') as file:
+    check = '1'
+    with open('ck/data3.ck', 'wb') as file:
         pickle.dump(check, file)
 
     image = cv2.imread("images/findImage_google.jpg", cv2.IMREAD_ANYCOLOR)
-    cv2.imshow("Moon", image)
+    cv2.imshow("iCarus Drone - Google Vision", image)
     cv2.waitKey(0)
     cv2.destroyAllWindows()

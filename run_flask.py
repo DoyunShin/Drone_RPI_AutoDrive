@@ -29,57 +29,57 @@ def dbg_main():
 
 @app.route('/dbg/exit/true')
 def dbg_setexit_true():
-   check = 'true'
-   with open('exit.ck', 'wb') as file:
+   check = '1'
+   with open('ck/data1.ck', 'wb') as file:
       pickle.dump(check, file)
       return "changed", check
 
 @app.route('/dbg/exit/false')
 def dbg_setexit_false():
-   check = 'false'
-   with open('exit.ck', 'wb') as file:
+   check = '0'
+   with open('ck/data1.ck', 'wb') as file:
       pickle.dump(check, file)
       return "changed", check
 
 @app.route('/dbg/person/false')
 def dbg_setperson_false():
-   check = 'false'
-   with open('person.ck', 'wb') as file:
+   check = '0'
+   with open('ck/data2.ck', 'wb') as file:
       pickle.dump(check, file)
       return "changed", check
 
 @app.route('/dbg/person/true')
 def dbg_setperson_true():
-   check = 'false'
-   with open('person.ck', 'wb') as file:
+   check = '0'
+   with open('ck/data2.ck', 'wb') as file:
       pickle.dump(check, file)
       return "changed", check
 
 @app.route('/dbg/status/false')
 def dbg_setstatus_false():
-   check = 'false'
-   with open('status.ck', 'wb') as file:
+   check = '0'
+   with open('ck/data3.ck', 'wb') as file:
       pickle.dump(check, file)
       return "changed",check
 
 @app.route('/dbg/status/true')
 def dbg_setstatus_true():
-   check = 'true'
-   with open('status.ck', 'wb') as file:
+   check = '1'
+   with open('ck/data3.ck', 'wb') as file:
       pickle.dump(check, file)
       return "changed",check
 
 
 @app.route('/dbg/exit/look')
 def dbg_checkexit():
-   with open('exit.ck', 'rb') as file:
+   with open('ck/data1.ck', 'rb') as file:
       check = pickle.load(file)
       print(check)
       return check
 
 @app.route('/dbg/status/look')
 def dbg_checkstatus():
-   with open('status.ck', 'rb') as file:
+   with open('ck/data3.ck', 'rb') as file:
       check = pickle.load(file)
       print(check)
       return check
@@ -87,7 +87,7 @@ def dbg_checkstatus():
 
 @app.route('/dbg/person/look')
 def dbg_checkperson():
-   with open('person.ck', 'rb') as file:
+   with open('ck/data2.ck', 'rb') as file:
       check = pickle.load(file)
       print(check)
       return check
@@ -97,22 +97,22 @@ def dbg_checkperson():
 
 @app.route('/runexit')
 def setexit_true():
-   check = 'true'
-   with open('exit.ck', 'wb') as file:
+   check = '1'
+   with open('ck/data1.ck', 'wb') as file:
       pickle.dump(check, file)
       return check
  
 
 @app.route('/checkexit')
 def checkexit():
-   with open('exit.ck', 'rb') as file:
+   with open('ck/data2.ck', 'rb') as file:
       check = pickle.load(file)
       print(check)
       return check
 
 @app.route('/checkstatus')
 def checkstatus():
-   with open('status.ck', 'rb') as file:
+   with open('ck/data3.ck', 'rb') as file:
       check = pickle.load(file)
       print(check)
       return check
@@ -120,19 +120,19 @@ def checkstatus():
 
 @app.route('/checkperson')
 def checkperson():
-   with open('person.ck', 'rb') as file:
+   with open('ck/data2.ck', 'rb') as file:
       check = pickle.load(file)
       print(check)
       return check
 
 if __name__ == '__main__':
    app.debug = True
-   check = 'Null'
-   with open('person.ck', 'wb') as file:
+   check = '0'
+   with open('ck/data2.ck', 'wb') as file:
       pickle.dump(check, file)
-   with open('status.ck', 'wb') as file:
+   with open('ck/data3.ck', 'wb') as file:
       pickle.dump(check, file)
-   with open('exit.ck', 'wb') as file:
+   with open('ck/data1.ck', 'wb') as file:
       pickle.dump(check, file)
    app.run(host="0.0.0.0", threaded=True, port=80)
 
