@@ -4,5 +4,15 @@
 
 ## Rocit Brock 다운로드
 
-* [64bit](http://robolink.ipdisk.co.kr/publist/HDD1/download/file/RBCoDrone_win64_1.2.3.zip)
 * [32bit](http://robolink.ipdisk.co.kr/publist/HDD1/download/file/RBCoDrone_win32_1.2.3.zip)
+* [64bit](http://robolink.ipdisk.co.kr/publist/HDD1/download/file/RBCoDrone_win64_1.2.3.zip)
+
+## 기본적인 설치
+
+## Windows
+먼저 git을 설치합니다.
+* [Git Website](https://git-scm.com/)
+
+
+> git clone https://github.com/SDR-Roul/E-Drone-Roul.git Drone -b master
+
