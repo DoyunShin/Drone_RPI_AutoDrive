@@ -3,7 +3,6 @@
 import cv2
 
 from google.cloud import vision
-from google.cloud.vision import types
 from PIL import Image, ImageDraw, ImageFont
 import pickle
 
@@ -14,7 +13,7 @@ def detect_face(face_file, max_results=4):
     client = vision.ImageAnnotatorClient()
 
     content = face_file.read()
-    image = types.Image(content=content)
+    image = vision.Image(content=content)
 
     return client.face_detection(image=image, max_results=max_results).face_annotations
 
@@ -67,7 +66,7 @@ def gAPI_call_main(input_filename, output_filename, max_results):
         client1 = vision.ImageAnnotatorClient()
         image.seek(0)
         content1 = image.read()
-        image1 = types.Image(content=content1)
+        image1 = vision.Image(content=content1)
 
         # Performs label detection on the image file
         response = client1.label_detection(image=image1)

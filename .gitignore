@@ -14,3 +14,4 @@ Mercury.modules
 *.jpg
 *.jpgN
 *.ck
+.vscode/settings.json
